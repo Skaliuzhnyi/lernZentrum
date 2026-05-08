@@ -96,6 +96,7 @@ export function ImpressumPage() {
             </p>
           </div>
         </div>
+        
       </section>
     </main>
   );

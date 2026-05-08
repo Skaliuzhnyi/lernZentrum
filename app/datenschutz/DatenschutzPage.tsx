@@ -1,6 +1,7 @@
 export function DatenschutzPage() {
-  return 
+  return (
     <main className="min-h-screen pt-16">
       
-    </main>;
+    </main>
+  )
 }
