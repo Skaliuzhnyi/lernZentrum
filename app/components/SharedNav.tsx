@@ -7,6 +7,7 @@ import { GraduationCap, MessageCircle, Menu, X } from "lucide-react";
 
 const WA_LINK = "https://wa.me/message/S2H5KUD4MELAH1";
 
+
 const NAV_LINKS = [
   { label: "Über uns",  href: "/#ueber-uns" },
   { label: "Fächer",   href: "/#faecher"   },
