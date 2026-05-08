@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from 'react';
 import { GraduationCap } from "lucide-react";
 
 const WA_LINK = "https://wa.me/message/S2H5KUD4MELAH1";
@@ -10,6 +11,7 @@ const LINKS = [
 ];
 
 export function SharedFooter() {
+  const [open, setOpen] = useState(false);
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (!href.startsWith("/#")) return;
     const id = href.slice(2);
