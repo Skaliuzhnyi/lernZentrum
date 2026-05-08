@@ -5,12 +5,6 @@ import { GraduationCap } from "lucide-react";
 const WA_LINK = "https://wa.me/message/S2H5KUD4MELAH1";
 
 const LINKS = [
-  { label: "Start",       href: "/"          },
-  { label: "Über uns",   href: "/#ueber-uns" },
-  { label: "Fächer",     href: "/#faecher"   },
-  { label: "Preise",     href: "/preise"     },
-  { label: "Bewerben",   href: "/bewerben"   },
-  { label: "Kontakt",    href: "/#kontakt"   },
   { label: "Impressum",  href: "/impressum"  },
   { label: "Datenschutz",href: "/datenschutz"},
 ];
@@ -38,9 +32,26 @@ export function SharedFooter() {
               <span className="text-white font-semibold text-sm">Bad Camberger Lernzentrum</span>
             </div>
             <p className="text-slate-500 text-xs max-w-[200px] leading-relaxed">
-              Staatlich anerkannt · Seit 1992<br />
+              Staatlich anerkannt · Seit 1992
+              <br />
               Bahnhofstraße 28, 65520 Bad Camberg
             </p>
+          </div>
+          {/* Links */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {LINKS.map((l) => (
+              <a
+                key={l.label}
+                href={l.href}
+                onClick={(e) => {
+                  handleClick(e, l.href);
+                  setOpen(false);
+                }}
+                className="text-slate-700 font-medium py-3 hover:underline transition-colors"
+              >
+                {l.label}
+              </a>
+            ))}
           </div>
         </div>
 
