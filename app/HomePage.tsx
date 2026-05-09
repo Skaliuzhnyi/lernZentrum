@@ -9,6 +9,8 @@ import {
   ArrowRight, Shield, Award, Infinity, Menu, X, ChevronLeft, ChevronRight,
 } from "lucide-react";
 
+import Image from 'next/image';
+
 const WA_LINK = "https://wa.me/message/S2H5KUD4MELAH1";
 
 const PHOTOS = [
@@ -177,67 +179,110 @@ function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0">
-        <img src={PHOTOS[1].src} alt="Schuelerinnen beim Lernen im Bad Camberger Lernzentrum"
-          className="w-full h-full object-cover object-center" fetchPriority="high" />
+        <Image
+          src={PHOTOS[1].src}
+          alt="Schuelerinnen beim Lernen im Bad Camberger Lernzentrum"
+          className="w-full h-full object-cover object-center"
+          fetchPriority="high"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0a1e30]/92 via-[#0a1e30]/70 to-[#0a1e30]/25" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a1e30]/55 via-transparent to-transparent" />
       </div>
 
       <div className="relative w-full max-w-6xl mx-auto px-5 pt-28 pb-20 md:min-h-screen md:flex md:items-center">
         <div className="max-w-xl">
-          <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 text-white text-xs font-medium px-3.5 py-1.5 rounded-full mb-6">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 text-white text-xs font-medium px-3.5 py-1.5 rounded-full mb-6"
+          >
             <div className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
             Staatlich anerkannt · Seit 1992
           </motion.div>
 
-          <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }}
+          <motion.h1
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight mb-5">
-            Hier macht Dir{" "}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight mb-5"
+          >
+            Hier macht Dir{' '}
             <span className="relative inline-block">
               Lernen
-              <motion.span initial={{ scaleX: 0 }} animate={{ scaleX: 1 }}
+              <motion.span
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
                 transition={{ duration: 0.5, delay: 0.75 }}
-                className="absolute bottom-1 left-0 right-0 h-3 bg-[#f5b731]/50 -z-10 origin-left rounded" />
-            </span>{" "}
+                className="absolute bottom-1 left-0 right-0 h-3 bg-[#f5b731]/50 -z-10 origin-left rounded"
+              />
+            </span>{' '}
             Spass!
           </motion.h1>
 
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-white/80 text-lg leading-relaxed mb-8">
+            className="text-white/80 text-lg leading-relaxed mb-8"
+          >
             Professionelle Nachhilfe in Bad Camberg – im Einzelunterricht oder in kleinen Gruppen,
             vor Ort oder online. Mit ueber 30 Jahren Erfahrung begleiten wir dich zum Erfolg.
           </motion.p>
 
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }} className="flex flex-col sm:flex-row gap-3 mb-10">
-            <motion.a href={WA_LINK} target="_blank" rel="noopener noreferrer"
-              whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center justify-center gap-2.5 bg-[#f5b731] text-[#1a3a5c] font-bold px-6 py-3.5 rounded-xl shadow-lg text-sm">
-              <MessageCircle size={16} />Kostenlose Probestunde<ArrowRight size={14} />
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex flex-col sm:flex-row gap-3 mb-10"
+          >
+            <motion.a
+              href={WA_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-flex items-center justify-center gap-2.5 bg-[#f5b731] text-[#1a3a5c] font-bold px-6 py-3.5 rounded-xl shadow-lg text-sm"
+            >
+              <MessageCircle size={16} />
+              Kostenlose Probestunde
+              <ArrowRight size={14} />
             </motion.a>
-            <motion.a href="#kontakt" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center justify-center gap-2 bg-white/15 backdrop-blur-sm border border-white/30 text-white font-medium px-6 py-3.5 rounded-xl hover:bg-white/25 transition-colors text-sm">
+            <motion.a
+              href="#kontakt"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-flex items-center justify-center gap-2 bg-white/15 backdrop-blur-sm border border-white/30 text-white font-medium px-6 py-3.5 rounded-xl hover:bg-white/25 transition-colors text-sm"
+            >
               Kontakt aufnehmen
             </motion.a>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex flex-wrap gap-5">
-            {[{ icon: Award, text: "Seit 1992" }, { icon: Shield, text: "Staatlich anerkannt" }, { icon: Infinity, text: "Keine Vertragslaufzeit" }]
-              .map(({ icon: Icon, text }) => (
-                <div key={text} className="flex items-center gap-1.5 text-sm text-white/75">
-                  <Icon size={14} className="text-[#f5b731]" /><span>{text}</span>
-                </div>
-              ))}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="flex flex-wrap gap-5"
+          >
+            {[
+              { icon: Award, text: 'Seit 1992' },
+              { icon: Shield, text: 'Staatlich anerkannt' },
+              { icon: Infinity, text: 'Keine Vertragslaufzeit' },
+            ].map(({ icon: Icon, text }) => (
+              <div key={text} className="flex items-center gap-1.5 text-sm text-white/75">
+                <Icon size={14} className="text-[#f5b731]" />
+                <span>{text}</span>
+              </div>
+            ))}
           </motion.div>
         </div>
       </div>
 
-      <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40 flex flex-col items-center">
+      <motion.div
+        animate={{ y: [0, 8, 0] }}
+        transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40 flex flex-col items-center"
+      >
         <ChevronRight size={20} className="rotate-90" />
       </motion.div>
     </section>
@@ -316,9 +361,19 @@ function UeberUns() {
     <section id="ueber-uns" className="py-24 bg-white" ref={ref}>
       <div className="max-w-6xl mx-auto px-5">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          <motion.div initial="hidden" animate={inView ? "visible" : "hidden"} variants={fadeUp} className="order-2 md:order-1">
+          <motion.div
+            initial="hidden"
+            animate={inView ? 'visible' : 'hidden'}
+            variants={fadeUp}
+            className="order-2 md:order-1"
+          >
             <div className="relative rounded-3xl overflow-hidden aspect-[4/3] bg-slate-100">
-              <img src={PHOTOS[0].src} alt={PHOTOS[0].alt} className="w-full h-full object-cover" loading="lazy" />
+              <Image
+                src={PHOTOS[0].src}
+                alt={PHOTOS[0].alt}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
               <div className="absolute bottom-5 left-5 bg-white/95 backdrop-blur-sm rounded-2xl px-4 py-3 shadow-lg">
                 <p className="text-xs text-slate-500 mb-0.5">Gegruendet</p>
                 <p className="font-bold text-[#1a3a5c] text-xl">1992</p>
@@ -327,9 +382,22 @@ function UeberUns() {
             </div>
           </motion.div>
 
-          <motion.div initial="hidden" animate={inView ? "visible" : "hidden"} variants={stagger} className="order-1 md:order-2">
-            <motion.p variants={fadeUp} className="text-[#f5b731] font-semibold text-sm uppercase tracking-widest mb-3">Ueber uns</motion.p>
-            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-bold text-[#1a3a5c] leading-tight mb-5">
+          <motion.div
+            initial="hidden"
+            animate={inView ? 'visible' : 'hidden'}
+            variants={stagger}
+            className="order-1 md:order-2"
+          >
+            <motion.p
+              variants={fadeUp}
+              className="text-[#f5b731] font-semibold text-sm uppercase tracking-widest mb-3"
+            >
+              Ueber uns
+            </motion.p>
+            <motion.h2
+              variants={fadeUp}
+              className="text-3xl md:text-4xl font-bold text-[#1a3a5c] leading-tight mb-5"
+            >
               Dein Lernzentrum mit ueber 30 Jahren Erfahrung
             </motion.h2>
             <motion.p variants={fadeUp} className="text-slate-600 leading-relaxed mb-4">
@@ -342,10 +410,11 @@ function UeberUns() {
               die Lehrerinnen und Lehrer in der Schule oft nicht haben.
             </motion.p>
             <motion.div variants={stagger} className="space-y-3 mb-8">
-              {["Einzelunterricht und Kleingruppen – individuelle Betreuung",
-                "Stoff nachholen, vertiefen und Pruefungsvorbereitung",
-                "Vor Ort in Bad Camberg oder bequem online",
-                "Ferienkurse und Nachpruefungsvorbereitung verfuegbar"
+              {[
+                'Einzelunterricht und Kleingruppen – individuelle Betreuung',
+                'Stoff nachholen, vertiefen und Pruefungsvorbereitung',
+                'Vor Ort in Bad Camberg oder bequem online',
+                'Ferienkurse und Nachpruefungsvorbereitung verfuegbar',
               ].map((p) => (
                 <motion.div key={p} variants={fadeUp} className="flex items-start gap-3">
                   <CheckCircle2 size={16} className="text-[#1a3a5c] mt-0.5 shrink-0" />
@@ -353,8 +422,13 @@ function UeberUns() {
                 </motion.div>
               ))}
             </motion.div>
-            <motion.a variants={fadeUp} href={WA_LINK} target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-[#1a3a5c] font-semibold text-sm hover:gap-3 transition-all">
+            <motion.a
+              variants={fadeUp}
+              href={WA_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-[#1a3a5c] font-semibold text-sm hover:gap-3 transition-all"
+            >
               Jetzt kennenlernen <ArrowRight size={16} />
             </motion.a>
           </motion.div>

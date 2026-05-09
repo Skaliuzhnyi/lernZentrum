@@ -108,6 +108,7 @@ export default function DatenschutzPage() {
             <h3 className="text-xl font-semibold mt-8 mb-3">Hinweis zur verantwortlichen Stelle</h3>
             <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
             <p>
+              <br />
               Bad Camberger Lernzentrum
               <br />
               Janina Plambeck
