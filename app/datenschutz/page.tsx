@@ -117,9 +117,11 @@ export default function DatenschutzPage() {
               65520 Bad Camberg
               <br />
               <br />
-              Telefon: +49 (064) 34 37 417
+              <a href="tel:+490643437417">Telefon: +49 (064) 34 37 417</a>
               <br />
-              E-Mail: info@badcamberger-lernzentrum.de
+              <a href="mailto:info@badcamberger-lernzentrum.de">
+                E-Mail: info@badcamberger-lernzentrum.de
+              </a>
             </p>
           </section>
 

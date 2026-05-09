@@ -22,9 +22,11 @@ export default function ImpressumPage() {
 
           <h2 className="text-2xl font-bold text-[#1a3a5c] mt-10 mb-4">Kontakt</h2>
           <p className="text-slate-700 leading-relaxed mb-6">
-            Telefon: +49 (064) 34 37 417
+            <a href="tel:+490643437417">Telefon: +49 (064) 34 37 417</a>
             <br />
-            E-Mail: info@badcamberger-lernzentrum.de
+            <a href="mailto:info@badcamberger-lernzentrum.de">
+              E-Mail: info@badcamberger-lernzentrum.de
+            </a>
           </p>
 
           <h2 className="text-2xl font-bold text-[#1a3a5c] mt-10 mb-4">
