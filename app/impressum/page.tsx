@@ -35,7 +35,9 @@ export default function ImpressumPage() {
           <p className="text-slate-700 leading-relaxed mb-6">Janina Plambeck</p>
 
           <h2 className="text-2xl font-bold text-[#1a3a5c] mt-10 mb-4">
-            Verbraucherstreitbeilegung/Universalschlichtungsstelle
+            Verbraucherstreitbeilegung
+            <br />
+            Universalschlichtungsstelle
           </h2>
           <p className="text-slate-700 leading-relaxed mb-6">
             Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
