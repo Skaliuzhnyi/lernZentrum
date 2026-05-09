@@ -1,23 +1,23 @@
-"use client";
+'use client';
 
 import { useState } from 'react';
-import { GraduationCap } from "lucide-react";
+import { GraduationCap } from 'lucide-react';
 
-const WA_LINK = "https://wa.me/message/S2H5KUD4MELAH1";
+const WA_LINK = 'https://wa.me/message/S2H5KUD4MELAH1';
 
 const LINKS = [
-  { label: "Impressum",  href: "/impressum"  },
-  { label: "Datenschutz",href: "/datenschutz"},
+  { label: 'Impressum', href: '/impressum' },
+  { label: 'Datenschutz', href: '/datenschutz' },
 ];
 
 export function SharedFooter() {
   const [open, setOpen] = useState(false);
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (!href.startsWith("/#")) return;
+    if (!href.startsWith('/#')) return;
     const id = href.slice(2);
-    if (window.location.pathname === "/") {
+    if (window.location.pathname === '/') {
       e.preventDefault();
-      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -49,7 +49,7 @@ export function SharedFooter() {
                   handleClick(e, l.href);
                   setOpen(false);
                 }}
-                className="text-slate-700 font-medium py-3 hover:underline transition-colors"
+                className="font-medium text-[#f5f5f5] hover:underline"
               >
                 {l.label}
               </a>
@@ -61,6 +61,13 @@ export function SharedFooter() {
           <p className="text-slate-600 text-xs">
             © {new Date().getFullYear()} Bad Camberger Lernzentrum
           </p>
+          <a
+            href={'https://skaliuzhnyi.github.io/cv/'}
+            className="text-slate-600 text-xs text-[#f5f5f5] hover:underline hover:text-[#fff]"
+            target="blank"
+          >
+            &reg; FLSK
+          </a>
           <a
             href={WA_LINK}
             target="_blank"
