@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { SharedNav } from './components/SharedNav';
 import { SharedFooter } from './components/SharedFooter';
 import { CookieBanner } from './components/CookieBanner';
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <SharedFooter />
         <CookieBanner />
+        <SpeedInsights />
       </body>
     </html>
   );
